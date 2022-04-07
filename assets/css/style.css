@@ -348,6 +348,82 @@ form input[type=submit] {
     color: #fff;
 }
 
+footer {
+    margin-top: 100px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    color: #fff;
+}
+
+.footer-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 160px;
+    padding: 60px 20px;
+}
+
+.footer-section:first-child,
+.footer-section:last-child {
+    flex: 1;
+}
+
+.footer-section:first-child {
+    flex-direction: row-reverse;
+    align-items: stretch;
+    background-color: rebeccapurple;
+}
+
+.footer-first {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    order: 1;
+    margin-right: 120px;
+}
+
+.footer-logo img {
+    height: 100px;
+    margin-bottom: 2rem;
+}
+
+.footer-network {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-network img {
+    height: 1.2rem;
+    width: auto;
+}
+
+.footer-section strong {
+    width: 100%;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.footer-section ul li {
+    list-style: none;
+    font-size: .9rem;
+    margin: .6rem 0;
+    line-height: 1.5;
+}
+
 @media (max-width: 1024px) {
     .menu-modal.active {
         display: block;
