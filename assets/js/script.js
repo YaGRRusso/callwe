@@ -8,6 +8,10 @@ const api = {
     }
 };
 
+document.querySelector('.header-left img').addEventListener('click', () => {
+    document.querySelector('html').classList.toggle('dark-mode');
+})
+
 // Menu mobile (visível em telas com menos de 1024px)
 document.querySelector('.menu-hamb-area').addEventListener('click', () => {
     document.querySelector('.menu-modal').classList.toggle('active');
