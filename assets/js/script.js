@@ -55,8 +55,10 @@ const setCurrentSlide = () => {
 const carouselItems = document.querySelectorAll('.carousel-item').length
 const setTranslateCarousel = (value) => {
     const windowWidth = window.innerWidth;
-    translateCount += value
     let translatePercent = 0
+    translateCount += value
+
+    translateCount < 0 ? translateCount = 0 : false
 
     if (windowWidth > 768) {
         slideCount = carouselItems / 3;
