@@ -17,6 +17,6 @@ Funcionalidades Extras
 - Dados do formulário salvos e prontos para POST;
 
 ### Observações
-Como não me foram fornecidas imagems, icones, logos, svgs ou vídeos, utilizei material da internet apenas para serem utilizados como exemplo.
+Como não me foram fornecidas imagens, icones, logos, svgs ou vídeos, retirei material externo da internet, apenas para serem utilizados como exemplo.
 
 A imagem principal da página é gerada de forma aleatória através do site https://picsum.photos/.
