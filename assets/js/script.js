@@ -75,7 +75,7 @@ const setTranslateCarousel = (value) => {
         translateCount = 0
     }
 
-    // Reescreve a cada clique para caso o usuário redimensione a tela com o sistema aberto
+    // Reescreve a cada clique caso o usuário redimensione a tela com o sistema aberto
     writeCarousel();
     setCurrentSlide();
     return translateCount * translatePercent

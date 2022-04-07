@@ -361,7 +361,7 @@ footer {
     align-items: center;
     flex-direction: column;
     width: 160px;
-    padding: 60px 20px;
+    padding: 60px 1.2rem;
 }
 
 .footer-section:first-child,
@@ -370,38 +370,8 @@ footer {
 }
 
 .footer-section:first-child {
-    flex-direction: row-reverse;
-    align-items: stretch;
-    background-color: rebeccapurple;
-}
-
-.footer-first {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    flex-direction: column;
-    order: 1;
-    margin-right: 120px;
-}
-
-.footer-logo img {
-    height: 100px;
-    margin-bottom: 2rem;
-}
-
-.footer-network {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-network img {
-    height: 1.2rem;
-    width: auto;
+    align-items: flex-end;
+    padding-right: 80px;
 }
 
 .footer-section strong {
@@ -422,6 +392,28 @@ footer {
     font-size: .9rem;
     margin: .6rem 0;
     line-height: 1.5;
+}
+
+.footer-logo-area {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.footer-logo {
+    height: 100px;
+    width: 140px;
+    margin-bottom: 10px;
+}
+
+.footer-network {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-network img {
+    height: 20px;
+    width: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -472,6 +464,26 @@ footer {
         font-size: 1.5rem;
         color: #f2f2f2;
     }
+
+    footer {
+        flex-wrap: wrap;
+    }
+
+    .footer-section {
+        flex: 1;
+        width: unset;
+        padding: 20px;
+    }
+
+    .footer-section:first-child,
+    .footer-section:nth-child(2) {
+        min-width: 50%;
+        align-items: center;
+    }
+
+    .footer-section:first-child {
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -518,5 +530,14 @@ footer {
         display: inline-flex;
         flex-direction: column;
         gap: 0;
+    }
+
+    .footer-section {
+        min-width: 50%;
+    }
+
+    .footer-section:first-child {
+        padding: 30px 0;
+        min-width: 100%;
     }
 }
