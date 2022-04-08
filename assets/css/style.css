@@ -3,7 +3,7 @@
 :root {
     --defaultColor: #626366;
     --primaryColor: #00aae2;
-    --backgroundColor: '#f2f2f2';
+    --backgroundColor: #f2f2f2;
     --borderColor: #e2e2e2;
     --width: 95vw;
     --maxWidth: 1140px;
@@ -339,6 +339,7 @@ form input[type=submit] {
 .outline-button {
     margin: 0 auto;
     width: 280px;
+    max-width: 100%;
     padding: 1.2rem 0;
     font-size: 1rem;
     text-transform: uppercase;
@@ -444,6 +445,7 @@ footer {
         bottom: 0;
         right: 0;
         width: 300px;
+        max-width: 95vw;
         background-color: #383838;
         display: flex;
         align-items: center;

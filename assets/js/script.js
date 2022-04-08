@@ -13,12 +13,22 @@ document.querySelector('.header-left img').addEventListener('click', () => {
 })
 
 // Menu mobile (visível em telas com menos de 1024px)
+const menuModal = document.querySelector('.menu-modal')
+const navMenu = document.querySelector('.nav-menu')
+const hambArea = document.querySelector('.menu-hamb-area')
+const menuHamb = document.querySelector('.menu-hamb')
 document.querySelector('.menu-hamb-area').addEventListener('click', () => {
-    document.querySelector('.menu-modal').classList.toggle('active');
-    document.querySelector('.nav-menu').classList.toggle('active');
-    document.querySelector('.menu-hamb-area').classList.toggle('active');
-    document.querySelector('.menu-hamb').classList.toggle('active');
+    menuModal.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    hambArea.classList.toggle('active');
+    menuHamb.classList.toggle('active');
 });
+document.querySelector('.menu-modal').addEventListener('click', () => {
+    menuModal.classList.remove('active');
+    navMenu.classList.remove('active');
+    hambArea.classList.remove('active');
+    menuHamb.classList.remove('active');
+})
 
 // Botão 'VER ARTIGOS"
 document.querySelectorAll('.service div').forEach((item) => {
