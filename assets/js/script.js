@@ -133,23 +133,34 @@ const formCity = document.querySelector('#form-city');
 const formState = document.querySelector('#form-state');
 
 // Executa a API ao tirar o foco do campo CEP (evita requisições desnecessárias à API)
+const formLoading = document.querySelector('.form-loading')
+const handleCepError = () => {
+    formLoading.querySelector('.loading').style.display = 'none';
+    formLoading.querySelector('strong').innerHTML = 'Cep Inválido!';
+    setTimeout(() => {
+        formLoading.classList.remove('active')
+        formLoading.querySelector('.loading').style.display = 'block';
+        formLoading.querySelector('strong').innerHTML = 'Carregando...';
+    }, 2000);
+    formCep.value = '';
+}
 formCep.addEventListener('focusout', async (item) => {
     const cep = item.target.value;
     let regexCep = /[0-9]{8}/;
     // Evita requisição com CEPS que contém letras
     if (regexCep.test(cep)) {
+        formLoading.classList.add('active')
         const cepInfo = await api.getCep(cep);
         if (!cepInfo.erro) {
             formAddress.value = cepInfo.bairro + ', ' + cepInfo.logradouro;
             formCity.value = cepInfo.localidade;
             formState.value = cepInfo.uf;
+            formLoading.classList.remove('active')
         } else {
-            alert('Cep Inválido!');
-            formCep.value = '';
+            handleCepError();
         }
     } else {
-        alert('Cep Inválido!');
-        formCep.value = '';
+        handleCepError();
     }
 })
 
