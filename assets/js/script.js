@@ -144,7 +144,13 @@ const handleCepError = () => {
     }, 2000);
     formCep.value = '';
 }
+const handleFormDisable = (value) => {
+    formAddress.disabled = value
+    formCity.disabled = value
+    formState.disabled = value
+}
 formCep.addEventListener('focusout', async (item) => {
+    handleFormDisable(true)
     const cep = item.target.value;
     let regexCep = /[0-9]{8}/;
     // Evita requisição com CEPS que contém letras
@@ -162,6 +168,7 @@ formCep.addEventListener('focusout', async (item) => {
     } else {
         handleCepError();
     }
+    handleFormDisable(false)
 })
 
 // Separa os dados do formulário em uma variável para um possível POST
